@@ -1,0 +1,36 @@
+/* Home page styling */
+.myIntro {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #1e2125;
+  letter-spacing: 2px;
+}
+
+.myBio {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #6c757d;
+}
+
+.lead {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  background-color: #343a40;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer h5 {
+  font-weight: bold;
+  color: #fff;
+}
+
+footer p {
+  color: #ced4da;
+}
