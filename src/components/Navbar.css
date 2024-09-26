@@ -104,6 +104,13 @@
   background-color: #fff;
 }
 
+/* Highlight the active nav link */
+.nav-link.active {
+  font-weight: bold;
+  color: #ff9100 !important;
+ 
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 991.98px) {
   .navbar {

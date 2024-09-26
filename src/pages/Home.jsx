@@ -1,7 +1,7 @@
 import React from 'react';
 import olivierImage from '../assets/olivier.png';
 import { Container, Row, Col } from 'react-bootstrap';
-import ReactTypingEffect from 'react-typing-effect';  // Using an alternative package
+import ReactTypingEffect from 'react-typing-effect';  
 import './home.css';
 
 export default function Home() {

@@ -22,6 +22,9 @@ function NavbarComponent() {
     };
   }, []);
 
+  const [currentPage, setCurrentPage] = useState('Home');
+  const handlePageChange = (page) => setCurrentPage(page);
+
   return (
     <Navbar bg={navbarColor} expand="lg" className={`navbar-${navbarColor} fixed-top`}>
       <Container>
@@ -32,11 +35,55 @@ function NavbarComponent() {
         
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} className="me-4 nav-link" to="/">Home</Nav.Link>
-            <Nav.Link as={Link} className="me-4 nav-link" to="/about">About Me</Nav.Link>
-            <Nav.Link as={Link} className="me-4 nav-link" to="/service">Services</Nav.Link>
-            <Nav.Link as={Link} className="me-4 nav-link" to="/portfolio">Portfolio</Nav.Link>
-            <Nav.Link as={Link} className="me-4 nav-link" to="/contact">Contact Me</Nav.Link>
+            <Nav.Link
+              as={Link}
+              className={`me-4 nav-link ${currentPage === 'Home' ? 'active' : ''}`}
+              onClick={() => handlePageChange('Home')}
+              to="/"
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              className={`me-4 nav-link ${currentPage === 'About' ? 'active' : ''}`}
+              onClick={() => handlePageChange('About')}
+              to="/about"
+            >
+              About Me
+            </Nav.Link>
+            
+
+             <Nav.Link
+              as={Link}
+              className={`me-4 nav-link ${currentPage === 'Portfolio' ? 'active' : ''}`}
+              onClick={() => handlePageChange('Portfolio')}
+              to="/portfolio"
+            >
+              Portfolio
+            </Nav.Link>
+
+             <Nav.Link
+              as={Link}
+              className={`me-4 nav-link ${currentPage === 'Contact' ? 'active' : ''}`}
+              onClick={() => handlePageChange('Contact')}
+              to="/contact"
+            >
+              Contact Me
+            </Nav.Link>
+
+            <Nav.Link
+              as={Link}
+              className={`me-4 nav-link ${currentPage === 'Resume' ? 'active' : ''}`}
+              onClick={() => handlePageChange('Resume')}
+              to="/resume"
+            >
+              Resume
+            </Nav.Link>
+            
+           
+
+           
+
           </Nav>
           <Nav>
             <Nav.Link href="https://facebook.com" className="nav-icon">
