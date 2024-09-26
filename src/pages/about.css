@@ -33,11 +33,11 @@ body {
    width: 100%;
 }
 
-/* Updated about-content-one */
+
 .about-content-one {
   margin-top: 20px;
   width: 35%;
-  height: 400px; /* Maintain a fixed height */
+  height: 400px; 
   background-color: aliceblue;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;

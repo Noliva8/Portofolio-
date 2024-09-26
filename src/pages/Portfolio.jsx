@@ -1,58 +1,60 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Portfolio.css'; // We'll use this file for custom CSS
+import './Portfolio.css';
+import monsterpic from '../assets/monsterpic.png';
+import cmspic from '../assets/cmspic.png';
+import note from '../assets/note.png';
+import wheather from '../assets/wheather.png';
+import gggg from '../assets/gggg.png';
+
 
 const projects = [
   {
-    title: 'Project One',
-    imageUrl: 'path-to-project-one-thumbnail.jpg', // replace with actual image path or URL
-    deployedLink: 'https://deployed-app-one.com',
-    repoLink: 'https://github.com/username/project-one',
+    title: 'the Stock-ness Monster',
+    imageUrl:monsterpic,
+    deployedLink: 'https://github.com/lindsay-terry/stock-ness-monster',
+    repoLink: 'https://github.com/lindsay-terry/stock-ness-monster',
   },
   {
-    title: 'Project Two',
-    imageUrl: 'path-to-project-two-thumbnail.jpg',
-    deployedLink: 'https://deployed-app-two.com',
-    repoLink: 'https://github.com/username/project-two',
+    title: 'CMS-style blog site similar to a Wordpress site',
+    imageUrl: cmspic,
+    deployedLink: 'https://cms-style-blog-site-xoig.onrender.com',
+    repoLink: 'https://github.com/Noliva8/CMS-style-blog-site/tree/main',
+  },
+
+  {
+    title: 'Note-Taker-Application',
+    imageUrl: note,
+    deployedLink: 'https://dashboard.render.com/web/srv-cq7l3ijv2p9s73c657rg',
+    repoLink: 'https://github.com/Noliva8/Note-Taker-Application',
   },
   {
-    title: 'Project Three',
-    imageUrl: 'path-to-project-three-thumbnail.jpg',
-    deployedLink: 'https://deployed-app-three.com',
-    repoLink: 'https://github.com/username/project-three',
+    title: 'weather-dashboard',
+    imageUrl: wheather,
+    deployedLink: 'https://noliva8.github.io/-weather-dashboard-/',
+    repoLink: 'https://github.com/Noliva8/-weather-dashboard-?tab=readme-ov-file',
   },
   {
-    title: 'Project Four',
-    imageUrl: 'path-to-project-four-thumbnail.jpg',
-    deployedLink: 'https://deployed-app-four.com',
-    repoLink: 'https://github.com/username/project-four',
-  },
-  {
-    title: 'Project Five',
-    imageUrl: 'path-to-project-five-thumbnail.jpg',
-    deployedLink: 'https://deployed-app-five.com',
-    repoLink: 'https://github.com/username/project-five',
-  },
-  {
-    title: 'Project Six',
-    imageUrl: 'path-to-project-six-thumbnail.jpg',
-    deployedLink: 'https://deployed-app-six.com',
-    repoLink: 'https://github.com/username/project-six',
+    title: 'Employee-Payroll-Tracker',
+    imageUrl: gggg,
+    deployedLink: 'https://noliva8.github.io/Employee-Payroll-Tracker/',
+    repoLink: 'https://github.com/Noliva8/Employee-Payroll-Tracker/deployments',
   },
 ];
 
 export default function Portfolio() {
   return (
-    <div>
-      {/* Section 1: Background with animated text */}
-      <section className="project-header" id="header">
+    <div className='portfolio-container'>
+      <section className="project-header portfolio-projects" id="header">
         <div className="overlay">
           <h1 className="animated-text">Some of My Projects</h1>
         </div>
       </section>
 
       {/* Section 2: Projects with Cards */}
-      <section className="container my-5">
+      {/* ---------------------------- */}
+
+      <section className="container my-5 projects">
         <div className="row">
           {projects.map((project, index) => (
             <div key={index} className="col-lg-4 col-md-6 mb-4">
@@ -88,6 +90,29 @@ export default function Portfolio() {
           ))}
         </div>
       </section>
+
+      {/* Footer Section */}
+      <footer className="footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 col-md-6">
+              <h5>Contact Me</h5>
+              <p>Email: nolivanoly@gmail.com</p>
+              <p>Phone: +1 (651) 587-8364</p>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <h5>Follow Me</h5>
+              <p>LinkedIn | GitHub | Twitter</p>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <h5>Location</h5>
+              <p>Arizona, USA</p>
+            </div>
+          </div>
+          <hr />
+          <p className="text-center">&copy; 2024 Olivier Ndicunguye - All Rights Reserved</p>
+        </div>
+      </footer>
     </div>
   );
 }
