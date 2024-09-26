@@ -92,27 +92,7 @@ export default function Portfolio() {
       </section>
 
       {/* Footer Section */}
-      <footer className="footer">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4 col-md-6">
-              <h5>Contact Me</h5>
-              <p>Email: nolivanoly@gmail.com</p>
-              <p>Phone: +1 (651) 587-8364</p>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <h5>Follow Me</h5>
-              <p>LinkedIn | GitHub | Twitter</p>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <h5>Location</h5>
-              <p>Arizona, USA</p>
-            </div>
-          </div>
-          <hr />
-          <p className="text-center">&copy; 2024 Olivier Ndicunguye - All Rights Reserved</p>
-        </div>
-      </footer>
+     
     </div>
   );
 }

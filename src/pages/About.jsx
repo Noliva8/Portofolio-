@@ -8,13 +8,7 @@ import 'animate.css';
 import ReactTypingEffect from 'react-typing-effect'; 
 
 export default function About() {
-  // Footer style
-  const footerStyle = {
-    backgroundColor: '#343a40',
-    color: 'white',
-    padding: '20px 0',
-    textAlign: 'center',
-  };
+
 
   return (
     <div className="app"> {/* Wrap everything in a flex container */}
@@ -58,28 +52,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer style={footerStyle}>
-        <Container>
-          <Row>
-            <Col xs={12} md={4}>
-              <h5>Contact Me</h5>
-              <p>Email: nolivanoly@gmail.com</p>
-              <p>Phone: +1 (651) 587-8364</p>
-            </Col>
-            <Col xs={12} md={4}>
-              <h5>Follow Me</h5>
-              <p>LinkedIn | GitHub | Twitter</p>
-            </Col>
-            <Col xs={12} md={4}>
-              <h5>Location</h5>
-              <p>Arizona, USA</p>
-            </Col>
-          </Row>
-          <hr style={{ borderColor: '#6c757d' }} />
-          <p className="mb-0">© 2024 Olivier Ndicunguye - All Rights Reserved</p>
-        </Container>
-      </footer>
+     
     </div>
   );
 }

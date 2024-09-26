@@ -1,10 +1,10 @@
+import './resume.css'; 
+
 export default function Resume() {
   return (
-    <div>
+    <div className="resume-container">
       <h1>My Resume</h1>
-      <p>
-       sample Resume
-      </p>
+      <p>COMING SOON</p>
     </div>
   );
 }
