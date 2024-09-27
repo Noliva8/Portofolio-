@@ -18,7 +18,9 @@ Portofolio that uses the last technologies
 
 ## Usage
 this is to showcase my skills
+this is the deployed link:
 
+https://noliva.netlify.app
 ## License
 
 This project is licensed under the MIT license.
