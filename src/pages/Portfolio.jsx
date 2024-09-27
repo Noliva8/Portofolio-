@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Portfolio.css';
+import './portfolio.css';
 import monsterpic from '../assets/monsterpic.png';
 import cmspic from '../assets/cmspic.png';
 import note from '../assets/note.png';
