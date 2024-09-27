@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Modal } from "react-bootstrap";
-import "./Contact.css";
+import "./contact.css";
 
 const Contact = () => {
   const form = useRef();
