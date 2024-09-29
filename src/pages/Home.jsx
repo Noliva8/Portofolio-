@@ -24,10 +24,12 @@ export default function Home() {
 
   return (
     <>
-      <Container fluid  style={landingPageStyle}>
+
+  
+      <Container className='mt-5 pt-5' fluid  style={landingPageStyle}>
         <Row className="align-items-center">
-          <Col xs={12} md={6} className="text-center text-md-start">
-            <img src={olivierImage} alt="Olivier" className="img-fluid rounded-circle shadow-lg" style={{ maxWidth: '80%', height: 'auto', border: '1px solid #000' }} />
+          <Col xs={12} md={6} className="text-center">
+            <img src={olivierImage} alt="Olivier" className="img-fluid rounded-circle shadow-lg" style={{ maxWidth: '70%', height: 'auto', border: '1px solid #000' }} />
           </Col>
 
           <Col xs={12} md={6} className="d-flex flex-column align-items-center align-items-md-start justify-content-center">
@@ -49,6 +51,7 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
+
 
     </>
   );

@@ -5,7 +5,7 @@ import './footer.css';
 function Footer() {
   return (
     <footer className="footer">
-  <div className="container">
+  {/* <div className="container"> */}
     <div className="row">
       <div className="col-lg-4 col-md-6">
         <h5>Contact Me</h5>
@@ -27,7 +27,7 @@ function Footer() {
     </div>
     <hr />
     <p className="text-center">&copy; 2024 Olivier Ndicunguye - All Rights Reserved</p>
-  </div>
+  {/* </div> */}
 </footer>
 
   );

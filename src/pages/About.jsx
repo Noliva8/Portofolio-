@@ -1,58 +1,132 @@
-import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Import Link for routing
-import './about.css';
-import { FaDownload } from 'react-icons/fa'; 
-import noliva from '../assets/Noliva.png';
-import 'animate.css';
-import ReactTypingEffect from 'react-typing-effect'; 
+import React from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import noliva from "../assets/Edited2.png"; 
+import { motion } from "framer-motion";
+
 
 export default function About() {
-
+  const cardData = [
+    {
+      title: "Full-Stack Developer",
+      content:
+        "Crafting seamless digital experiences with React, Node.js, and PostgreSQL. Passionate about turning complex problems into simple, elegant solutions."
+    },
+    {
+      title: "Creative Visionary",
+      content:
+        "Before software, I was a video producer. My creative journey taught me the art of design, storytelling, and attention to detail—skills I bring into every line of code."
+    },
+    {
+      title: "Design-Driven Development",
+      content:
+        "I believe that great design is the foundation of user-friendly applications. I fuse aesthetics and functionality to create intuitive user experiences."
+    },
+    {
+      title: "Problem Solver",
+      content:
+        "I love tackling complex challenges and finding efficient solutions through code. My goal is to build software that not only works but works elegantly."
+    },
+    {
+      title: "Media Meets Code",
+      content:
+        "With a background in video production, I strive to merge media and technology. From visual storytelling to coding rich media applications, I bring the best of both worlds."
+    },
+    {
+      title: "Lifelong Learner",
+      content:
+        "I thrive on learning new technologies and growing as a developer. Constantly pushing boundaries and exploring the latest in software and media tech."
+    }
+  ];
 
   return (
-    <div className="app"> {/* Wrap everything in a flex container */}
-      <div className="aboutWrapper">
-        <div className="contentWrpper">
-          <div className='about-content-one'>
-            <div className='cirle'>
-              <div className='line-shape-one'></div>
-              <div className='line-shape-two'></div>
-              <div className='line-shape-three'></div>
-              <div className='line-shape-four'></div>
-            </div>
-            <img className='about-image' src={noliva} alt='image of olivier'/>
-            <ReactTypingEffect
-              text={["Hey, the world is moving so fast", "make sure you do not stay behind", "I am here to help"]}
-              speed={100}
-              eraseSpeed={50}
-              typingDelay={200}
-              eraseDelay={1000}
-              className="display-4"
-              style={{ fontFamily: 'Playfair Display', fontWeight: 'bold', fontSize: "20px", color: '#1e2125', position: "absolute", bottom: "20px", marginLeft: "20px"}}
-            />
-          </div>
+    <Container fluid className="d-flex align-items-center flex-column">
+      <Row
+        className="align-items-center justify-content-center border-bottom"
+        style={{ minHeight: "400px", padding: "20px 0", margin: "50px" }}
+      >
+        <Col xs={12} md={6}>
+          <img
+            src={noliva}
+            alt="Image of Olivier"
+            style={{
+              marginLeft: "60px",
+              width: "60%",
+              height: "auto",
+              objectFit: "cover",
+              borderRadius: "10px"
+            }}
+          />
+        </Col>
+        <Col xs={12} md={6} style={{ padding: "20px" }}>
+          <h1
+            style={{
+              fontSize: "2.5rem",
+              fontFamily: "Playfair Display",
+              fontWeight: "bold",
+              color: "#1e2125"
+            }}
+          >
+            I'M MORE THAN A DEVELOPER
+          </h1>
+          <p
+            style={{
+              fontFamily: "Roboto",
+              color: "#6c757d",
+              maxWidth: "500px",
+              fontSize: "18px",
+              lineHeight: "1.5"
+            }}
+          >
+            Before becoming a software engineer, I was a video producer.
+            <br /> This shaped my understanding of what good design means.
+          </p>
+        </Col>
+      </Row>
 
-          <div className='about-content-two'>
-            <h2>I’m Olivier Ndicunguye, a Software Engineer.</h2>
-            <p class="animate__animated animate__fadeInUp">
-              Hi, I’m Olivier Ndicunguye. My unexpected journey into software engineering began when I hired someone to build a website for my media company, but the outcome was disappointing.
-            </p>
-            <p class="animate__animated animate__flipInX">
-              Before entering software engineering, I spent my career in the video production industry, where I created and managed various projects. My desire to adapt to the digital age led me to seek help in developing a custom application for my company. However, the poorly designed website I received didn’t match my vision.
-            </p>
-            <p class="animate__animated animate__slideInRight">
-              This frustration became the turning point. Instead of settling, I decided to take control of my company's digital future by enrolling at Arizona State University to study Software Engineering. Thanks to my incredible instructor, Omar, and all the TAs who supported me along the way, I was able to chart a new path in tech.
-            </p>
-            <p>
-              Today, I’m proud to build applications that not only meet my standards but also provide value to others.
-            </p>
-            <Button as={Link} to="/contact" variant="primary">Get in touch</Button> {/* Link the button */}
-          </div>
-        </div>
-      </div>
+      {/* Row for Cards */}
+      <Row className="mt-5 mb-5">
+        
+        {cardData.map((card, index) => (
+          <Col key={index} md={4} className="mb-4" >
+            <motion.div
+              initial={{ opacity: 0, rotate: 30}}
+              whileInView={{ opacity: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, delay: index * 0.2 }} // Adds a staggered fade effect
+            >
+              <Card style={{backgroundColor: "#1e2125", opacity: "0.5", position:"relative", display:"none"}}></Card>
+              <Card style={{backgroundColor: "#1e2125", opacity: "0.5", position:"absolute", top: "2px", bottom:"0", height: "280px", width: "100%", backgroundColor: "#acc1e9"}}></Card>
 
-     
-    </div>
+              <Card style={{ padding: "20px", textAlign: "center", height: "100%" }}>
+                <Card.Body >
+                  <Card.Title
+                    style={{
+                      fontSize: "1.5rem",
+                      fontFamily: "Playfair Display",
+                      fontWeight: "bold",
+                      color: "#1e2125",
+                      padding: "20px"
+                    }}
+                  >
+                    {card.title}
+                  </Card.Title>
+                  <Card.Text
+                    style={{
+                      fontFamily: "Roboto",
+                      color: "#6c757d",
+                      maxWidth: "500px",
+                      fontSize: "18px",
+                      lineHeight: "1.5"
+                    }}
+                  >
+                    {card.content}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </motion.div>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 }
