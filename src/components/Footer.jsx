@@ -4,7 +4,7 @@ import './footer.css';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer style={{backgroundColor: "#345d95"}} className="footer">
   {/* <div className="container"> */}
     <div className="row">
       <div className="col-lg-4 col-md-6">

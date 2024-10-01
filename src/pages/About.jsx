@@ -1,7 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import noliva from "../assets/Edited2.png"; 
+
 import { motion } from "framer-motion";
+import './about.css';
+
 
 
 export default function About() {
@@ -40,6 +43,7 @@ export default function About() {
 
   return (
     <Container fluid className="d-flex align-items-center flex-column">
+      {/* Header Section */}
       <Row
         className="align-items-center justify-content-center border-bottom"
         style={{ minHeight: "400px", padding: "20px 0", margin: "50px" }}
@@ -60,10 +64,18 @@ export default function About() {
         <Col xs={12} md={6} style={{ padding: "20px" }}>
           <h1
             style={{
-              fontSize: "2.5rem",
-              fontFamily: "Playfair Display",
-              fontWeight: "bold",
-              color: "#1e2125"
+              display: "flex",
+    justifyContent: "start",
+    fontSize: "3.5rem", 
+    fontFamily: "Playfair Display, serif", 
+    fontWeight: "bold",
+    color: "#2c3e50", 
+    letterSpacing: "2px", 
+    textTransform: "uppercase",
+    paddingBottom: "20px", 
+   
+    marginBottom: "10px", 
+    textShadow: "2px 2px 5px rgba(0,0,0,0.15)"
             }}
           >
             I'M MORE THAN A DEVELOPER
@@ -84,21 +96,53 @@ export default function About() {
       </Row>
 
       {/* Row for Cards */}
-      <Row className="mt-5 mb-5">
-        
+      <Row className="mt-5 mb-5 justify-content-center">
+       <h2 
+  
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    fontSize: "2.5rem", 
+    fontFamily: "Playfair Display, serif", 
+    fontWeight: "bold",
+    color: "#2c3e50", // Dark,
+    letterSpacing: "2px", 
+    textTransform: "uppercase",
+    paddingBottom: "20px", 
+    
+    marginBottom: "40px", 
+    textShadow: "2px 2px 5px rgba(0,0,0,0.15)"
+  }}
+>
+  Who I Am ?
+</h2>
+
         {cardData.map((card, index) => (
-          <Col key={index} md={4} className="mb-4" >
+          <Col key={index} md={4} className="mb-4">
             <motion.div
-              initial={{ opacity: 0, rotate: 30}}
+              initial={{ opacity: 0, rotate: 30 }}
               whileInView={{ opacity: 1, rotate: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: index * 0.2 }} // Adds a staggered fade effect
+              transition={{ duration: 0.9, delay: index * 0.2 }} // Adds staggered fade effect
             >
-              <Card style={{backgroundColor: "#1e2125", opacity: "0.5", position:"relative", display:"none"}}></Card>
-              <Card style={{backgroundColor: "#1e2125", opacity: "0.5", position:"absolute", top: "2px", bottom:"0", height: "280px", width: "100%", backgroundColor: "#acc1e9"}}></Card>
+              {/* Decorative background */}
+              <Card className="card-decoration" style={{
+                position: "absolute",
+                top: "-30px",
+                left: "10px",
+                right: "10px",
+                bottom: "0",
+                zIndex: "-1",
+                maxWidth:"550px",
+                height: "250px",
+                backgroundColor: "#acc1e9",
+                opacity: 0.9,
+                clipPath: "polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%)" 
+              }}></Card>
 
-              <Card style={{ padding: "20px", textAlign: "center", height: "100%" }}>
-                <Card.Body >
+              
+              <Card className="card" style={{ padding: "20px", textAlign: "center", maxWidth: "500px", height: "100%", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", position: "relative", zIndex: "1"}}>
+                <Card.Body>
                   <Card.Title
                     style={{
                       fontSize: "1.5rem",
@@ -114,7 +158,6 @@ export default function About() {
                     style={{
                       fontFamily: "Roboto",
                       color: "#6c757d",
-                      maxWidth: "500px",
                       fontSize: "18px",
                       lineHeight: "1.5"
                     }}
@@ -126,6 +169,41 @@ export default function About() {
             </motion.div>
           </Col>
         ))}
+      </Row>
+
+      <Row>
+
+        <Col  xs={12}>
+        
+        <Card style={{width: "100%", justifyContent: "center", alignItems:"center"}}>
+          <Card.Title>Follow me on: </Card.Title>
+          <Card.Body>
+
+               <a href="https://github.com/Noliva8" className="nav-icon">
+             <i className="fa-brands fa-github"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/olivier-ndicunguye-045697301/" className="nav-icon">
+              <i className="fa-brands fa-linkedin"></i>
+              </a>
+            
+            <a href="https://www.facebook.com/profile.php?id=61555700842418" className="nav-icon">
+              <i className="fab fa-facebook"></i>
+              </a>
+
+                <a href="" className="nav-icon">
+             <i className="fa-brands fa-instagram"></i>
+              </a>
+              
+            <a href="https://twitter.com" className="nav-icon">
+              <i className="fab fa-twitter"></i>
+          </a>
+
+
+          
+          </Card.Body>
+        </Card>
+        </Col>
       </Row>
     </Container>
   );
