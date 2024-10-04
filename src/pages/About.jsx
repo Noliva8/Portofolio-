@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import noliva from "../assets/Edited2.jpg"; 
+import noliva from "../assets/edited2.jpg"; 
 
 import { motion } from "framer-motion";
 import './about.css';
