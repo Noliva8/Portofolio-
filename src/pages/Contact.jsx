@@ -5,7 +5,7 @@ import "./contact.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 import contactGirl from "../assets/contact-girl.png";
-import envelop from "../assets/envelop.mov";
+
 
 const Contact = () => {
   const form = useRef();
@@ -131,6 +131,7 @@ const Contact = () => {
     <Col md={6}>
       <div>
         <img 
+        loading="lazy"
           style={{ width: "100%", maxWidth: "600px" }} 
           src={contactGirl} 
           alt="image of the girl with envelope" 

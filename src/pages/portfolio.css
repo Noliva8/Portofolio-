@@ -1,54 +1,8 @@
 
-/* Section one */
-/* ------------- */
 
-.portfolio-container{
-  background-color:aliceblue;
-}
 
-.portfolio-projects{
-   background-image: url("../assets/projects.jpg"); 
-  background-color: #cccccc; 
-  height: 500px;
-  background-position: center; 
-  background-repeat: no-repeat;
-  background-size: cover; 
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.animated-text{
-  margin: 0 auto;
-  margin-top: 200px;
-  font-size: 4rem;
-  padding:20px;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 3px;
-  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
-   animation: fadeInUp 1.5s ease-in-out;
-}
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px); 
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0); 
-  }
-}
-.overlay {
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 500px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
 
 /* section 2 */

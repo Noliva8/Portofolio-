@@ -1,5 +1,5 @@
 import React from 'react';
-import olivierImage from '../assets/olivier.png';
+import olivierImage from '../assets/olivier.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
 import ReactTypingEffect from 'react-typing-effect';  
 import './home.css';
@@ -29,7 +29,7 @@ export default function Home() {
       <Container className='mt-5 pt-5' fluid  style={landingPageStyle}>
         <Row className="align-items-center">
           <Col xs={12} md={6} className="text-center">
-            <img src={olivierImage} alt="Olivier" className="img-fluid rounded-circle shadow-lg" style={{ maxWidth: '70%', height: 'auto', border: '1px solid #000' }} />
+            <img src={olivierImage} alt="Olivier" loading="lazy" className="img-fluid rounded-circle shadow-lg" style={{ maxWidth: '70%', height: 'auto', border: '1px solid #000' }} />
           </Col>
 
           <Col xs={12} md={6} className="d-flex flex-column align-items-center align-items-md-start justify-content-center">

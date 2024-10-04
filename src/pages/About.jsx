@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import noliva from "../assets/Edited2.png"; 
+import noliva from "../assets/Edited2.jpg"; 
 
 import { motion } from "framer-motion";
 import './about.css';
@@ -50,6 +50,7 @@ export default function About() {
       >
         <Col xs={12} md={6}>
           <img
+           loading="lazy"
             src={noliva}
             alt="Image of Olivier"
             style={{

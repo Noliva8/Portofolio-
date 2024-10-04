@@ -2,11 +2,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./portfolio.css";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import monsterpic from "../assets/monsterpic.png";
-import cmspic from "../assets/cmspic.png";
-import note from "../assets/note.png";
-import wheather from "../assets/wheather.png";
-import gggg from "../assets/gggg.png";
+import monsterpic from "../assets/monsterpic.jpg";
+import cmspic from "../assets/cmspic.jpg";
+import note from "../assets/note.jpg";
+import wheather from "../assets/wheather.jpg";
+import gggg from "../assets/gggg.jpg";
 
 const projects = [
   {
@@ -75,7 +75,7 @@ export default function Portfolio() {
         <Col md={6} key={index}>
           <Card>
           <Card.Title style={{fontFamily: "Playfair Display, serif",}}>{project.title}</Card.Title>
-          <Card.Img src= {project.imageUrl} alt="project image" />
+          <Card.Img loading="lazy" src= {project.imageUrl} alt="project image" />
           <Card.Body style={{display: "flex", justifyContent: "space-between"}}>
               <a href={project.deployedLink} style={{display: "inline", backgroundColor: "#345d95", color: "white", cursor: "pointer", borderRadius: "10px", border: "1px solid black", fontSize: " 18px", padding: "10px", textDecoration: "none"}}> <i style={{margin: "10px"}} className="fa-brands fa-square-github"></i> Deployed Link</a>
               
